@@ -1,0 +1,44 @@
+<!--
+ - Created by alxan on 05.03.2020.
+ -->
+
+<aura:component description="Body" controller="productsForCatalogOnPage" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> <!-- calling doInit method in Component Controller -->
+    <aura:attribute name="prodList" type="Product2[]"/> <!-- create Array type Account variable-->
+    <lightning:card>
+        <div>
+            <lightning:card>
+                <h1>Catalog</h1>
+                <div class="slds-card__body">
+                    <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                        <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Name">Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Type">Product Code</div>
+                            </th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <aura:iteration items="{!v.prodList}" var="prod"> <!-- iteration account record.-->
+                            <tr class="slds-hint-parent">
+                                <th scope="row">
+                                    <div class="slds-truncate" title="Adam Choi"><a href="javascript:void(0);">{!prod.Name}</a></div>
+                                </th>
+                                <td>
+                                    <div class="slds-truncate" title="Company One">{!prod.ProductCode}</div>
+                                </td>
+
+                            </tr>
+                        </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+
+            </lightning:card>
+        </div>
+    </lightning:card>
+</aura:component>
