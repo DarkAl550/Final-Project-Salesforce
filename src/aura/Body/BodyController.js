@@ -2,22 +2,16 @@
  * Created by alxan on 07.03.2020.
  */
 ({
-    doInit : function(component, event, helper) {
-   var action = component.get("c.getProductsName"); //Calling Apex class controller 'getAccountRecord' method
 
-               action.setCallback(this, function(response) {
-                   var state = response.getState(); //Checking response status
-                   var result = JSON.stringify(response.getReturnValue());
-                   if (component.isValid() && state === "SUCCESS")
-                       component.set("v.prodList", response.getReturnValue());  // Adding values in Aura attribute variable.
-                       alert(result);
-                       console.log("Success!(Product)");
-                   });
-               $A.enqueueAction(action);
-               }
-
-
-
-
-
+    handleInfoEvt: function (component, event) {
+        let productInfo = event.getParam('Index');
+        //console.log('Body : ' + productInfo);
+        component.set('v.index', productInfo);
+        //console.log('Body (index)--> '+component.get('v.index'));
+    },
+    handleCategoryEvent: function (component, event) {
+        let category = event.getParam('category');
+        component.set('v.category', category);
+        //console.log('Body (category): ' + component.get('v.category'));
+    }
 })

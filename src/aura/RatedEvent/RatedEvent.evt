@@ -1,0 +1,8 @@
+<!--
+ - Created by alxan on 03.04.2020.
+ -->
+
+<aura:event type="COMPONENT" description="RatedEvent">
+    <aura:attribute name="Rate" type="Decimal" default="1"/>
+    <aura:attribute name="Symbol" type="String" default="Br"/>
+</aura:event>

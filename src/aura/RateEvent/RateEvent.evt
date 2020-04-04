@@ -1,0 +1,7 @@
+<!--
+ - Created by alxan on 03.04.2020.
+ -->
+
+<aura:event type="COMPONENT" description="RateEvent">
+    <aura:attribute name="Rate" type="Decimal"/>
+</aura:event>

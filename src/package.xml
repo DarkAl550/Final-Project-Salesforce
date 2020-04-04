@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>ApexControllerLazyComponent</members>
+        <members>ChangePasswordController</members>
+        <members>ChangePasswordControllerTest</members>
+        <members>CustomSearchController</members>
+        <members>ForgotPasswordController</members>
+        <members>ForgotPasswordControllerTest</members>
+        <members>InfiniteScrollController</members>
+        <members>MyProfilePageController</members>
+        <members>MyProfilePageControllerTest</members>
+        <members>NBRBService</members>
+        <members>RateChanges</members>
+        <members>RateJob</members>
+        <members>SampleAuraController</members>
+        <members>SearchingProducts</members>
+        <members>SiteLoginController</members>
+        <members>SiteLoginControllerTest</members>
+        <members>SiteRegisterController</members>
+        <members>SiteRegisterControllerTest</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>SiteFooter</members>
+        <members>SiteHeader</members>
+        <members>SiteLogin</members>
+        <members>SitePoweredBy</members>
         <name>ApexComponent</name>
     </types>
     <types>
-        <members>*</members>
+        <members>AnswersHome</members>
+        <members>BandwidthExceeded</members>
+        <members>ChangePassword</members>
+        <members>Exception</members>
+        <members>FileNotFound</members>
+        <members>ForgotPassword</members>
+        <members>ForgotPasswordConfirm</members>
+        <members>Home</members>
+        <members>HomePage</members>
+        <members>IdeasHome</members>
+        <members>InMaintenance</members>
+        <members>MyProfilePage</members>
+        <members>SiteLogin</members>
+        <members>SiteRegister</members>
+        <members>SiteRegisterConfirm</members>
+        <members>SiteTemplate</members>
+        <members>StdExceptionTemplate</members>
+        <members>Unauthorized</members>
+        <members>UnderConstruction</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>AppContainer</members>
+        <members>AuraAppContainer</members>
+        <members>Body</members>
+        <members>CartEvent</members>
+        <members>Category</members>
+        <members>CategoryEvent</members>
+        <members>ContentCmp</members>
+        <members>DataTableCellCmp</members>
+        <members>HeaderCmp</members>
+        <members>Info</members>
+        <members>InfoEvt</members>
+        <members>MainCmp</members>
+        <members>ModalWindowCartCmp</members>
+        <members>RateEvent</members>
+        <members>RatedEvent</members>
+        <members>SearchCom</members>
+        <members>SymbolEvent</members>
+        <members>Test</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
-        <members>*</members>
+        <members>SiteSamples</members>
+        <members>logo</members>
         <name>StaticResource</name>
     </types>
     <version>48.0</version>

@@ -1,0 +1,7 @@
+<!--
+ - Created by alxan on 26.03.2020.
+ -->
+
+<aura:event type="COMPONENT" description="InfoEvt">
+    <aura:attribute name="Index" type="String"/>
+</aura:event>

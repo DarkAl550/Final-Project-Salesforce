@@ -2,43 +2,28 @@
  - Created by alxan on 07.03.2020.
  -->
 
-<aura:component description="ModalWindowCartCmp" controller="accountsWithContactsClass" implements="flexipage:availableForAllPageTypes" access="global">
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> <!-- calling doInit method in Component Controller -->
-    <aura:attribute name="accLst" type="Account[]"/> <!-- create Array type Account variable-->
-    <article class="slds-card">
-        <div class="slds-card__body">
-            <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
-                <thead>
-                <tr class="slds-text-title_caps">
-                    <th scope="col">
-                        <div class="slds-truncate" title="Name">Name</div>
-                    </th>
-                    <th scope="col">
-                        <div class="slds-truncate" title="Type">Type</div>
-                    </th>
-                    <th scope="col">
-                        <div class="slds-truncate" title="Phone">Phone</div>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <aura:iteration items="{!v.accLst}" var="acc"> <!-- iteration account record.-->
-                    <tr class="slds-hint-parent">
-                        <th scope="row">
-                            <div class="slds-truncate" title="Adam Choi"><a href="javascript:void(0);">{!acc.Name}</a></div>
-                        </th>
-                        <td>
-                            <div class="slds-truncate" title="Company One">{!acc.Type}</div>
-                        </td>
-                        <td>
-                            <div class="slds-truncate" title="{!acc.Phone}">{!acc.Phone}</div>
-                        </td>
-                    </tr>
-                </aura:iteration>
-                </tbody>
-            </table>
-        </div>
-        <footer class="slds-card__footer"><a href="javascript:void(0);"><!--View All <span class="slds-assistive-text">entity type</span>--></a></footer>
-    </article>
-</aura:component>
+<aura:component implements="flexiPage:availableForAllPageTypes">
 
+    <aura:attribute name="prod" type="List"/>
+
+
+    <aura:iteration items="{!v.prod}" var="p" indexVar="index">
+        <div id="{!index}" class="slds-grid slds-box slds-box_small slds-m-around_x-small">
+            <div class="slds-col slds-small-size_1-of-6">
+                <img src="{!p.Product2.DisplayUrl}"/>
+            </div>
+            <div class="slds-col">
+                <p>{!p.Product2.Name}</p>
+            </div>
+            <div class="slds-col">
+                <p>{!p.UnitPrice}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                <button id="{!index}" class="slds-button slds-color__background_gray-4" onclick="{!c.removeFromCart}">
+                    <lightning:icon iconName="utility:close" size="x-small"/>
+                </button>
+            </div>
+        </div>
+    </aura:iteration>
+
+</aura:component>

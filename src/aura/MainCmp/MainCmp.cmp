@@ -3,6 +3,17 @@
  -->
 
 <aura:component description="MainCmp">
-    <c.HeaderCmp/>
-    <c.Body/>
+    <aura:handler name="CartEv" event="c:CartEvent" action="{!c.handleCartEvent}"/>
+    <aura:handler name="RateEv" event="c:RatedEvent" action="{!c.handleRateEvent}"/>
+    <aura:handler name="SymbolEv" event="c:SymbolEvent" action="{!c.handleSymbolEvent}"/>
+
+    <aura:attribute name="ToCart" type="List"/>
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="symbol" type="String" default=" Br"/>
+
+    <div style="background-color: #C42522;">
+        <c.HeaderCmp addToCart="{!v.ToCart}"/>
+        <c.Body rate="{!v.rate}" symbol="{!v.symbol}"/>
+    </div>
+
 </aura:component>

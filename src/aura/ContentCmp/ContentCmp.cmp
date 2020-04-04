@@ -1,0 +1,62 @@
+<!--
+ - Created by alxan on 10.03.2020.
+ -->
+
+<aura:component description="ContentCmp" controller="SearchingProducts" implements="flexipage:availableForAllPageTypes"
+                access="global">
+    <!--Handlers-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!--Events-->
+    <aura:registerEvent name="InfoEv" type="c:InfoEvt"/>
+    <aura:registerEvent name="CartEv" type="c:CartEvent"/>
+
+    <!--Search-->
+    <aura:attribute name="searchResult" type="List"
+                    description="use for store and display account list return from server"/>
+    <!--LazyLoad-->
+    <aura:attribute name="sizeLimit" type="Integer" default="15" access="private"/>
+    <aura:attribute name="hasMore" type="Boolean" default="False" access="private"/>
+    <aura:attribute name="isLoadinig" type="Boolean" default="False" access="private"/>
+    <!--Cart's products-->
+    <aura:attribute name="cart" type="List"/>
+    <!--InfoCard-->
+    <aura:attribute name="info" type="String"/>
+    <!--Converting rate-->
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="symbol" type="String"/>
+
+    <div style="background-color: #C42522;">
+
+        <ui:scrollerWrapper aura:id="scroller" class="scrollerSize">
+            <div aura:id="infiniteScroll">
+                <lightning:layout multipleRows="true">
+                    <aura:iteration items="{!v.searchResult}" var="prod" indexVar="index">
+                        <!-- iteration account record.-->
+
+                        <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3"
+                                              padding="around-small">
+                            <div id="{!index}"
+                                 class="slds-box slds-color__background_gray-4 slds-box slds-p-around_medium slds-text-align_center"
+                                 onclick="{!c.infoEvent}">
+                                <div>
+                                    <img src="{!prod.Product2.DisplayUrl}"/>
+                                    <h1>{!prod.Product2.Name}</h1>
+                                    <p><b>
+                                            <lightning:formattedNumber value="{!prod.UnitPrice / v.rate}"
+                                                                       maximumFractionDigits="2"/>{!v.symbol}</b></p>
+                                    <p>Rating</p>
+                                    <button class="slds-button" name="corz" onclick="{!c.addToCart}">
+                                        <lightning:icon iconName="utility:add" size="small"/>
+                                    </button>
+                                </div>
+                            </div>
+                        </lightning:layoutItem>
+
+                    </aura:iteration>
+                </lightning:layout>
+            </div>
+        </ui:scrollerWrapper>
+    </div>
+
+</aura:component>

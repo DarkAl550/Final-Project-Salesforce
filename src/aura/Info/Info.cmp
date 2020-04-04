@@ -1,0 +1,41 @@
+<!--
+ - Created by alxan on 26.03.2020.
+ -->
+
+<aura:component description="Info">
+    <aura:attribute name="InfoProduct" type="Object"/>
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="symbol" type="String"/>
+    <aura:attribute name="rating" type="Integer" default="3"/>
+    <lightning:card>
+        <div>
+            <div class="slds-size_3-of-4 slds-align_absolute-center">
+                <img src="{!v.InfoProduct.Product2.DisplayUrl}"/>
+            </div>
+            <div>
+                <span class="slds-align_absolute-center">{!v.InfoProduct.Product2.Name}</span>
+                <p class="slds-align_absolute-center"><b>
+                        <lightning:formattedNumber value="{!v.InfoProduct.UnitPrice / v.rate}"
+                                                   maximumFractionDigits="2"/>{!v.symbol}</b></p>
+            </div>
+            <div>
+                <lightning:tabset>
+                    <lightning:tab label="Rating">
+                        <div class="slds-size_3-of-4">
+                            <lightning:slider label="Rate:" value="{!v.rating}" max="5"/>
+                            <lightning:textarea name="ratingText" label="Create your review!"/>
+                            <lightning:button name="rat" onclick=""/>
+                        </div>
+
+                    </lightning:tab>
+                    <lightning:tab label="Description" title="2nd tab extended title">
+                        <p class="slds-align_absolute-center">{!v.InfoProduct.Product2.Description}</p>
+                    </lightning:tab>
+                    <lightning:tab label="Shop">
+                        <p>Shop</p>
+                    </lightning:tab>
+                </lightning:tabset>
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

@@ -2,7 +2,18 @@
  - Created by alxan on 05.03.2020.
  -->
 
-<aura:component description="HeaderCmp">
+<aura:component description="HeaderCmp" controller="RateChanges">
+    <aura:attribute name="addToCart" type="String"/>
+    <aura:attribute name="rateName" type="String" default="BYN"/>
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="CartEv" event="c:CartEvent" action="{!c.handleCartEvent}"/>
+
+    <aura:registerEvent name="RateEv" type="c:RatedEvent"/>
+    <aura:registerEvent name="SymbolEv" type="c:SymbolEvent"/>
+
+
     <!-- Modal window -->
     <div role="dialog" tabindex="-1" aria-labelledby="header43" aura:id="Modalbox" class="slds-modal slds-modal_large">
 
@@ -12,56 +23,73 @@
                     <header class="slds-media slds-media_center slds-has-flexi-truncate">
                         <div class="slds-media__figure">
                             <span class="slds-icon_container" title="description of icon when needed">
-                                <lightning:icon iconName="custom:custom93" size="large" />
+                                <lightning:icon iconName="custom:custom93" size="large"/>
                             </span>
                         </div>
                         <div class="slds-media__body">
                             <h2>
-                                <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Cart">
-                                    <span class="slds-text-heading_small">Cart</span>
-                                </a>
+
+                                <span class="slds-text-heading_small">My cart</span>
+
                             </h2>
                         </div>
+                        <button class="slds-button slds-color__background_gray-4" onclick="{!c.closeModal}">
+                            <lightning:icon iconName="utility:close" size="small"/>
+                        </button>
+
                     </header>
                 </div>
             </div>
             <div class="slds-modal__content">
 
-                <c.ModalWindowCartCmp/>
+                <c.ModalWindowCartCmp prod="{!v.addToCart}"/>
 
             </div>
             <div class="slds-modal__footer">
-                <ui:button label="close" press="{!c.closeModal}"  />
+
+                <lightning:button variant="success" label="Buy" onclick=""/>
             </div>
         </div>
     </div>
     <div class="slds-backdrop " aura:id="Modalbackdrop"></div>
 
     <!--Header-->
-    <lightning:card>
+    <lightning:card class="slds-box_border slds-color__background_gray-4">
         <div class="slds-grid slds-grid_vertical-align-start">
-            <div class="slds-col">
-                <img src="{!$Resource.logo}"/>
+            <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                <img class="slds-size_1-of-4 " src="{!$Resource.logo}"/>
             </div>
-            <div class="slds-col">
-                <h1>Auto parts</h1>
-                <lightning:input type="search" label="Search" name="search" />
-            </div>
-            <div class="slds-col">
-                <lightning:select name="selectLanguage" label="Choose language" required="true">
-                    <option value="ru">RUS</option>
-                    <option value="en">ENG</option>
-                </lightning:select>
+            <div class="slds-col slds-size_1-of-3 slds-align-middle">
 
-                <lightning:select name="selectPrice" label="Choose products price" required="true">
-                    <option value="USD">$ / USD</option>
-                    <option value="EUR">€ / EUR</option>
-                    <option value="BYN">Br / BYN</option>
-                </lightning:select>
-                <lightning:button  name="corz"  onclick="{!c.openmodal}">
-                    <lightning:icon iconName="custom:custom93" size="large" />
-                </lightning:button>
+                <div class="slds-text-heading_large slds-text-align_left " style="color: #C42522; font-size: 250%;">
+                    <b><i>Auto parts</i></b></div>
+
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-align_absolute-center ">
+                <div class="slds-grid">
+                    <div class="slds-col slds-m-right_medium">
+                        <lightning:select name="selectLanguage" label="Choose language">
+                            <option value="en">ENG</option>
+                            <option value="ru">RUS</option>
+                        </lightning:select>
+
+                        <lightning:select name="selectPrice" label="Choose products price" value="{!v.rateName}"
+                                          onchange="{!c.rateEvent}">
+                            <option value="BYN">Br / BYN</option>
+                            <option value="USD">$ / USD</option>
+                            <option value="EUR">€ / EUR</option>
+                        </lightning:select>
+
+
+                    </div>
+                    <div class="slds-col slds-align-bottom slds-m-left_medium">
+                        <button class="slds-button slds-color__background_gray-4" name="corz" onclick="{!c.openmodal}">
+                            <lightning:icon iconName="custom:custom93" size="large"/>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
+
     </lightning:card>
 </aura:component>

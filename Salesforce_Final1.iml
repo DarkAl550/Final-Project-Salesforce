@@ -3,8 +3,9 @@
   <component name="FacetManager">
     <facet type="IlluminatedCloud" name="Illuminated Cloud">
       <configuration>
-        <option name="connectionName" value="Final Project" />
-        <option name="defaultSourceRootUrl" value="file://$USER_HOME$/IdeaProjects/Final Project/src" />
+        <option name="connectionName" value="Salesforce_Final" />
+        <option name="connectionType" value="MDAPI" />
+        <option name="defaultSourceRootUrl" value="file://$MODULE_DIR$/src" />
         <option name="moduleContents">
           <ModuleContents>
             <option name="contentSelectionType" value="SELECTED" />
@@ -28,7 +29,7 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
-                            <option name="name" value="TestClass" />
+                            <option name="name" value="ApexControllerLazyComponent" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -40,6 +41,10 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="CustomSearchController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="ForgotPasswordController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -48,11 +53,35 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="InfiniteScrollController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="MyProfilePageController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MyProfilePageControllerTest" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="NBRBService" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="RateChanges" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="RateJob" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SampleAuraController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SearchingProducts" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -69,14 +98,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="SiteRegisterControllerTest" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="accountsWithContactsClass" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="productsForCatalogOnPage" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -142,6 +163,10 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="HomePage" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="IdeasHome" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -179,10 +204,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="UnderConstruction" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="HomePage" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -261,11 +282,7 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="MainCmp" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="HeaderCmp" />
+                            <option name="name" value="AuraAppContainer" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -273,7 +290,63 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="CartEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Category" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CategoryEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ContentCmp" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="DataTableCellCmp" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="HeaderCmp" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Info" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="InfoEvt" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="MainCmp" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="ModalWindowCartCmp" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="RateEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="RatedEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SearchCom" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SymbolEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Test" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -495,6 +568,15 @@
                             <option name="name" value="Contact.Level__c" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Employee__c.Email__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Employee__c.LastName__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Employee__c.Phone__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Goal.OrigGoalId__c" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -529,6 +611,12 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity.TrackingNumber__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c.Price__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Valute__c.Value__c" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -707,6 +795,9 @@
                             <option name="name" value="EmailMessage" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Employee__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="EngagementChannelType" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -869,6 +960,9 @@
                             <option name="name" value="RevenueElement" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Review__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Scorecard" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -908,6 +1002,9 @@
                             <option name="name" value="Solution" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Store__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="StreamActivityAccess" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -932,6 +1029,9 @@
                             <option name="name" value="UserProvisioningRequest" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Valute__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="WorkType" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -946,6 +1046,22 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="Employee__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Review__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Valute__c-en_US" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="CustomObjectTranslation" />
                       <option name="wildcard" value="false" />
                     </MetadataType>
@@ -958,12 +1074,28 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="Home" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="CustomSite" />
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
                       <option name="entries">
                         <list>
+                          <MetadataEntry>
+                            <option name="name" value="Employee__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Home" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c" />
+                          </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="standard-Account" />
                           </MetadataEntry>
@@ -1534,7 +1666,13 @@
                             <option name="name" value="EmailMessage-Email Message Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Employee__c-Employee Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Event-Event Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="FeedItem-Feed Item Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Global-Global Layout" />
@@ -1636,6 +1774,9 @@
                             <option name="name" value="ResourcePreference-Resource Preference Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Review__c-Review Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Scorecard-Scorecard Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1670,6 +1811,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Solution-Solution Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c-Store Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Task-Task Layout" />
@@ -1876,6 +2020,9 @@
                             <option name="name" value="DigitalWallet.DigitalWallet" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Employee__c.All" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="EngagementChannelType.All_EngagementChannelTypes" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2018,6 +2165,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Solution.AllUnreviewedSolutions" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c.All" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Task.CompletedTasks" />
@@ -2264,10 +2414,16 @@
                             <option name="name" value="Gold Partner User" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Guest" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="High Volume Customer Portal User" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="HighVolumePortal" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Home Profile" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Identity User" />
@@ -2437,6 +2593,9 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="ApexDevNet" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="NBRB" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2928,6 +3087,9 @@
                             <option name="name" value="DataUsePurpose" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Employee__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="EngagementChannelType" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2997,6 +3159,9 @@
                             <option name="name" value="ReportResultBlob" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Review__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Scorecard" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -3010,6 +3175,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="SiqUserBlacklist" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="StreamActivityAccess" />
@@ -3254,6 +3422,10 @@
                             <option name="name" value="SiteSamples" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="logo" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="StaticResource" />
@@ -3287,6 +3459,9 @@
                             <option name="name" value="Contract" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Employee__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Event" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -3305,6 +3480,9 @@
                             <option name="name" value="ResourcePreference" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Review__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="ServiceAppointment" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -3321,6 +3499,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Solution" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Store__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Task" />
@@ -3401,10 +3582,10 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$USER_HOME$/IdeaProjects/Final Project">
-      <sourceFolder url="file://$USER_HOME$/IdeaProjects/Final Project/src" isTestSource="false" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="IlluminatedCloud (Final Project/Final Project)" jdkType="IlluminatedCloud" />
+    <orderEntry type="jdk" jdkName="IlluminatedCloud (Salesforce_Final1/Salesforce_Final)" jdkType="IlluminatedCloud" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

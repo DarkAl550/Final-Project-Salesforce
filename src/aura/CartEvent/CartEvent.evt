@@ -1,0 +1,7 @@
+<!--
+ - Created by alxan on 01.04.2020.
+ -->
+
+<aura:event type="COMPONENT" description="CartEvent">
+    <aura:attribute name="Cart" type="List"/>
+</aura:event>

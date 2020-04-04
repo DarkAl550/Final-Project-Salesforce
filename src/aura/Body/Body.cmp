@@ -2,43 +2,31 @@
  - Created by alxan on 05.03.2020.
  -->
 
-<aura:component description="Body" controller="productsForCatalogOnPage" implements="flexipage:availableForAllPageTypes" access="global">
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> <!-- calling doInit method in Component Controller -->
-    <aura:attribute name="prodList" type="Product2[]"/> <!-- create Array type Account variable-->
-    <lightning:card>
-        <div>
-            <lightning:card>
-                <h1>Catalog</h1>
-                <div class="slds-card__body">
-                    <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
-                        <thead>
-                        <tr class="slds-text-title_caps">
-                            <th scope="col">
-                                <div class="slds-truncate" title="Name">Name</div>
-                            </th>
-                            <th scope="col">
-                                <div class="slds-truncate" title="Type">Product Code</div>
-                            </th>
+<aura:component description="Body" controller="SearchingProducts" implements="flexipage:availableForAllPageTypes"
+                access="global">
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <aura:iteration items="{!v.prodList}" var="prod"> <!-- iteration account record.-->
-                            <tr class="slds-hint-parent">
-                                <th scope="row">
-                                    <div class="slds-truncate" title="Adam Choi"><a href="javascript:void(0);">{!prod.Name}</a></div>
-                                </th>
-                                <td>
-                                    <div class="slds-truncate" title="Company One">{!prod.ProductCode}</div>
-                                </td>
+    <aura:handler name="InfoEv" event="c:InfoEvt" action="{!c.handleInfoEvt}"/>
+    <aura:handler name="CategoryEv" event="c:CategoryEvent" action="{!c.handleCategoryEvent}"/>
 
-                            </tr>
-                        </aura:iteration>
-                        </tbody>
-                    </table>
-                </div>
+    <aura:attribute name="index" type="Object" default="0"/>
+    <aura:attribute name="category" type="List"/>
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="symbol" type="String"/>
 
-            </lightning:card>
+    <div class="slds-grid slds-m-top_medium">
+        <div class="slds-col slds-size_1-of-5 slds-m-right_small slds-m-left_small">
+            <!--Sorting -->
+            <c:Category rate="{!v.rate}"/>
         </div>
-    </lightning:card>
+
+        <div class="slds-col">
+            <!-- Books -->
+            <c:ContentCmp searchResult="{!v.category}" rate="{!v.rate}" symbol="{!v.symbol}"/>
+        </div>
+
+        <div class="slds-col slds-size_1-of-5 slds-m-left_small slds-m-right_small">
+            <!--Information about book -->
+            <c:Info InfoProduct="{!v.index}" rate="{!v.rate}" symbol="{!v.symbol}"/>
+        </div>
+    </div>
 </aura:component>

@@ -1,0 +1,7 @@
+<!--
+ - Created by alxan on 30.03.2020.
+ -->
+
+<aura:event type="COMPONENT" description="CategoryEvent">
+    <aura:attribute name="category" type="List"/>
+</aura:event>

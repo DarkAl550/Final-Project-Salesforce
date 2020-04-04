@@ -1,0 +1,7 @@
+<!--
+ - Created by alxan on 04.04.2020.
+ -->
+
+<aura:event type="COMPONENT" description="SymbolEvent">
+    <aura:attribute name="Symbol" type="String"/>
+</aura:event>

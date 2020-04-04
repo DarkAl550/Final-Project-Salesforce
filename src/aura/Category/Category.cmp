@@ -1,0 +1,75 @@
+<!--
+ - Created by alxan on 27.03.2020.
+ -->
+
+<aura:component description="Category" controller="SearchingProducts">
+
+    <aura:registerEvent name="CategoryEv" type="c:CategoryEvent"/>
+
+
+    <!--Searching attribute-->
+    <aura:attribute name="searchResult" type="List"
+                    description="use for store and display account list return from server"/>
+    <aura:attribute name="searchKeyword" type="String" default="" description="use for store user search input"/>
+    <aura:attribute name="Message" type="boolean" default="false"
+                    description="use for display no record found message"/>
+    <aura:attribute name="TotalNumberOfRecord" type="integer" default="0"
+                    description="use for display Number of records"/>
+
+
+    <aura:attribute name="sizeLimit" type="Integer" default="10" access="private"/>
+    <aura:attribute name="hasMore" type="Boolean" default="False" access="private"/>
+    <aura:attribute name="isLoadinig" type="Boolean" default="False" access="private"/>
+
+    <!--Sorting attribute-->
+    <aura:attribute name="prices" type="Integer" default="5000"/>
+    <aura:attribute name="categoryProd" type="String" default=""/>
+
+    <aura:attribute type="String" name="rate"/>
+
+    <!-- ERROR MESSAGE IF NOT RECORDS FOUND-->
+    <aura:if isTrue="{!v.Message}">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">No Records Found...</h2>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    <lightning:card>
+        <lightning:spinner variant="brand" size="large" aura:id="Id_spinner" class="slds-hide"/>
+        <div class="slds-m-left_large">
+            <div class="slds-size_3-of-4">
+                <lightning:input value="{!v.searchKeyword}"
+                                 label="Search product:"
+                                 aura:id="searchField"/>
+            </div>
+            <div class="slds-size_3-of-4">
+                <lightning:select name="Category" label="Category" value="{!v.categoryProd}"
+                                  title="Choose any category">
+                    <option value="">All categories</option>
+                    <option value="Battery">Batteries</option>
+                    <option value="Fuel Filter">Fuel filters</option>
+                    <option value="Light">Light</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Brake Disk">Brake discs</option>
+                    <option value="Brake Pad">Brake pads</option>
+                    <option value="Fuel Pump">Fuel pump</option>
+                    <option value="Radiator">Radiator</option>
+                    <option value="Turbine">Turbine</option>
+                    <option value="Shock Absorber">Shock absorber</option>
+                </lightning:select>
+            </div>
+            <div class="slds-size_3-of-4">
+                <lightning:slider label="Price:" value="{!v.prices}" step="5" max="10000"/>
+            </div>
+        </div>
+        <div class="slds-size_1-of-4 slds-align_absolute-center slds-m-top_medium">
+            <lightning:button onclick="{!c.Search}"
+                              variant="brand"
+                              label="Search"
+                              iconName="utility:search"/>
+        </div>
+    </lightning:card>
+</aura:component>
