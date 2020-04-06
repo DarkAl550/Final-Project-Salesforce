@@ -17,7 +17,7 @@ public with sharing class SearchingProducts {
         List < PricebookEntry > returnList = new List  < PricebookEntry > ();
         List < PricebookEntry > lstOfAccount = new List<PricebookEntry>();
 
-        lstOfAccount = Database.query('SELECT id, Product2.Name, Product2.DisplayUrl, UnitPrice FROM PricebookEntry WHERE UnitPrice <= :price AND Product2.IsActive = TRUE' + query);
+        lstOfAccount = Database.query('SELECT id, Product2.Name, Product2.DisplayUrl, UnitPrice  FROM PricebookEntry WHERE UnitPrice <= :price AND Product2.IsActive = TRUE' + query);
 
 
 

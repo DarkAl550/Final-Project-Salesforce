@@ -4,8 +4,9 @@
     <option name="connections">
       <list>
         <IlluminatedCloudConnection>
-          <option name="connectionName" value="Final Project" />
-          <option name="defaultModuleName" value="Final Project" />
+          <option name="connectionName" value="Final_Project" />
+          <option name="connectionType" value="MDAPI" />
+          <option name="defaultModuleName" value="Final_Project" />
           <option name="offlineSymbolTablePath" value="$PROJECT_DIR$/IlluminatedCloud/Final_Project/OfflineSymbolTable.zip" />
         </IlluminatedCloudConnection>
       </list>

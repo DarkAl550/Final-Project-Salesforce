@@ -3,7 +3,7 @@
  */
 
 public with sharing class NBRBService {
-    public void getRateByCodeAndDate() {
+    public static void getRateByCodeAndDate() {
 
         List<Valute__C> val = Valute__c.getall().values();
         System.debug(val.size());
@@ -38,10 +38,6 @@ public with sharing class NBRBService {
 
     }
     public class Rate {
-        public String CUR_ID;
-        public String Cur_Name;
-        public String Cur_Abbreviation;
-        public String Cur_Scale;
         public Double Cur_OfficialRate;
     }
 }

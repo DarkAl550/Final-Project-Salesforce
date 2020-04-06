@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="ProductName" type="String"/>
+    <aura:attribute name="rating" type="Integer" default="5"/>
+    
+	<div>
+    	<div>
+        	<p>Rating {!v.ProductName}</p>
+        </div>
+        <div>
+            <lightning:slider label="Your rate:" value="{!v.rating}" max="5"/>
+        </div>
+        <div>
+        	<lightning:textarea name="inputText" value="Your text"/>
+        </div>
+    </div>
+</aura:component>
