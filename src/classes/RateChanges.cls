@@ -3,10 +3,10 @@
  */
 
 public with sharing class RateChanges {
-    @AuraEnabled
+    @AuraEnabled 
     public static Decimal changeRate(String name) {
         List<Valute__C> val = Valute__c.getall().values();
-        Decimal rate;
+        Decimal rate = 0;
         if (name == 'EUR') {
             rate = val[0].Value__c;
         } else if (name == 'USD') {

@@ -17,6 +17,10 @@ public class GetReviewTest {
     }
     @isTest
     public static void testSetProductReviews(){
+        GetReview.setProductReviews('Test TExt', 5, 'TestNameProduct', '01t2w000000DJAYAA4');
+        String testName = 'Review: 01t2w000000DJAYAA4';
+        List<Review__c> testList = [SELECT Id, Name, ReviewText__c, Rate__c FROM Review__c WHERE Name = :testName];
         
+        System.assertEquals(1, testList.size());
     }
 }

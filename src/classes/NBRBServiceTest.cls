@@ -6,12 +6,7 @@
 private class NBRBServiceTest {
     @IsTest
     static void getRateByCodeAndDate() {
-
-
-        Test.startTest();
-
-        Test.stopTest();
-
-        System.assertEquals('','');
+		
+        
     }
 }
